@@ -20,9 +20,10 @@ class Encontrista(db.Model):
     ano_encontro = db.Column(db.String(10))
     data_casamento = db.Column(db.String(20))
 
-@app.before_first_request
-def create_tables():
-    db.create_all()
+if __name__ == '__main__':
+    with app.app_context():
+        db.create_all()
+    app.run(debug=True, host='0.0.0.0', port=3000)
 
 @app.route('/')
 def index():
