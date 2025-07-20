@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head><title>Encontristas</title></head>
+<body>
+<h2>Encontristas</h2>
+<a href="/logout">Sair</a>
+<table border="1">
+<tr><th>Nome Ele</th><th>Nome Ela</th><th>Ano</th><th>Encontro</th></tr>
+{% for e in encontristas %}
+<tr>
+  <td>{{ e.nome_usual_ele }}</td>
+  <td>{{ e.nome_usual_ela }}</td>
+  <td>{{ e.ano_encontro }}</td>
+  <td>{{ e.numero_encontro }}</td>
+</tr>
+{% endfor %}
+</table>
+</body>
+</html>
